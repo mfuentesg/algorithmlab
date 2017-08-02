@@ -7,7 +7,7 @@ def bubble_sort(l):
         lc[j] = aux
 
     for i in range(len(lc)-1):
-        for j in range(len(lc)-1):
+        for j in range(len(lc)-(i+1)):
             print("({} < {})".format(lc[j+1], lc[j]))
             if lc[j+1] < lc[j]:
                 print("({}: {} <- {}: {})".format(j, lc[j], j+1, lc[j+1]))
