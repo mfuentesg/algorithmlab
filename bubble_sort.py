@@ -16,9 +16,12 @@ def bubble_sort(l):
 
         print("resulting list: {} with {} swaps".format(lc, swaps))
         print("--")
+
+        if swaps == 0:
+            break;
     return lc
 
-l = [10,9,8,7,6,5,4,3,2,1]
+l = [3, 2, 4, 1]
 new = bubble_sort(l)
 
-print("from {} to {}".format(l, new))
+print("sorted: from {} to {}".format(l, new))
