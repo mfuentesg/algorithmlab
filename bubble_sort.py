@@ -7,18 +7,18 @@ def bubble_sort(l):
         lc[j] = aux
 
     for i in range(len(lc)-1):
+        swaps = 0
         for j in range(len(lc)-(i+1)):
-            print("({} < {})".format(lc[j+1], lc[j]))
             if lc[j+1] < lc[j]:
                 print("({}: {} <- {}: {})".format(j, lc[j], j+1, lc[j+1]))
                 swap(j, j+1)
+                swaps = swaps + 1
 
-        print(lc)
+        print("resulting list: {} with {} swaps".format(lc, swaps))
         print("--")
     return lc
 
 l = [10,9,8,7,6,5,4,3,2,1]
-print(l)
 new = bubble_sort(l)
 
 print("from {} to {}".format(l, new))
